@@ -13,6 +13,7 @@ def integrate(x,y,vx,vy,fx,fy,m,dt):
     x+=vx*dt
     y+=vy*dt
     return x,y,vx,vy
+
 # Main part of the program
 mstar=100
 m=1
@@ -22,6 +23,7 @@ r=50
 x,y=0,r
 vx,vy=1.2,0
 trajx,trajy=[],[]
+
 for t in range(nsteps):
     fx,fy=force(x,y,m,mstar)
     x,y,vx,vy=integrate(x,y,vx,vy,fx,fy,m,dt)
